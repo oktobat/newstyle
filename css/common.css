@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+/* font-family: 'Raleway', sans-serif; */
+
+/* header */
+#header {
+    width:200px; height:100%;
+    background:rgb(26, 26, 26);
+    position:fixed; top:0; left:0; 
+    color:#c3c3c3;
+    font-family: 'Raleway', sans-serif;
+    /* z-index: 99999; */
+}
+#header h1 {  text-align:center; padding:70px 0;  }
+#header h1 a {
+    display:inline-block; 
+    background-image: url(../image/bottomlogo.png);
+    width:94px; height:75px;
+    background-size:contain; 
+}
+
+.navopen { display:none }
+
+/* header sign */
+#header #nav { 
+    /* height:20vh;   */
+    /* overflow-y:auto;  */
+    /* overflow-x:hidden  */
+}
+
+#header .sign {
+    color:#555;
+    border:1px dotted #343434;
+    overflow: hidden;
+}
+#header .sign a {
+    width:50%; float:left;
+    text-align: center; font-size:12px;
+    padding:7px;
+    transition:all 0.3s
+}
+#header .sign a:hover { color:#86b8ea; }
+#header .sign a:nth-child(1) { border-right:1px dotted #343434; }
+
+#header #nav .depth1 { margin:20px 0 }
+#header #nav .depth1 > li { position:relative;   }
+#header #nav .depth1 > li > a {
+    display:block; 
+    font-size:15px; text-align: right; font-weight: bold;
+    padding:16px 30px; 
+}
+#header #nav .depth1 > li > a:hover {
+    background:#000;
+    color:#86b8ea;
+}
+#header #nav .depth1 > li .depth2 {
+    position:absolute; top:0; left:0%;
+    /* background:rgba(17, 17, 17, 0.8); */
+    width:140px; opacity:0; z-index:-1;
+    font-size:13px;
+    margin-top:10px; 
+    
+}
+#header #nav .depth1 > li.on .depth2 {
+    left:100%; 
+    opacity:1; z-index:9999; 
+    transition:left 0.05s, opacity 0.1s, z-index 0.2s;
+}
+#header #nav .depth1 .depth2 li a {
+    display:block;
+    padding:10px 20px;
+    transition:all 0.1s;
+}
+
+#header #nav .depth1 > li .depth2 li:hover a {
+    background:#000;
+    color:#86b8ea;
+}
+#header .decobox { position:absolute; top:0; left:100%; width:0px; height:100%; 
+    background:rgba(17, 17, 17, 0.8); transition:all 0.1s}
+#header .decobox.on { width:140px; }
+
+/* header contact */
+#header .contact {
+    font-size:17px;
+    border-bottom:1px dotted #343434;
+}
+#header .contact p:first-child {
+    color:#86b8ea;
+    line-height: 1.2em;
+    border-top:1px dotted #343434;
+    border-bottom:1px dotted #343434;
+    padding:20px;
+}
+#header .contact p:last-child {
+    color:#ddc37c;
+    font-size:12px;
+    padding:35.5px 20px;
+}
+/* header info */
+#header .info {
+    text-align: center;
+    font-size:11px;
+    color:#777;
+    line-height: 1.5em;
+}
+#header .info span { font-weight: bold; letter-spacing: -1px;}

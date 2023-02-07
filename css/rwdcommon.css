@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+@media screen and (max-width:950px) {
+    /* header */
+    #header {
+        width:100%; height:60px;
+        background:rgb(26, 26, 26);
+        position:relative; top:0; left:0; 
+        color:#c3c3c3;
+        font-family: 'Raleway', sans-serif;
+        /* z-index: 99999; */
+    }
+    #header h1 {  text-align:left; padding:15px 15px;  }
+    #header h1 a {
+        display:inline-block; 
+        background-image: url(../image/logo.png);
+        width:100px; height:29px;
+        background-size:contain; 
+    }
+
+    #header .navopen {
+        display:block; 
+        position:absolute; top:18px; right:20px;
+        width:30px; height:25px;
+        z-index:99999;
+    }
+    #header .navopen .bar1 {
+        background:#fff;
+        position:absolute; 
+        width:30px; height:2px;
+        transition:all 0.3s;
+    }
+    #header .navopen .bar2 {
+        background:#fff;
+        position:absolute; top:12px;
+        width:30px; height:2px;
+        transition:all 0.3s;
+    }
+    #header .navopen .bar3 {
+        background:#fff;
+        position:absolute; bottom:0; left:0;
+        width:30px; height:2px;
+        transition:all 0.3s;
+    }
+    #header .navopen:hover .bar1 {
+        background:#21bbb1;
+        top:-2px;
+    }
+    #header .navopen:hover .bar2 {
+        background:#21bbb1;
+    }
+    #header .navopen:hover .bar3 {
+        background:#21bbb1;
+        bottom:-2px;
+    }
+    #header .navopen.on .bar1 {
+        background:#21bbb1;
+        transform: rotate(135deg);
+        top:10px
+    }
+    #header .navopen.on .bar2 {
+        background:#21bbb1;
+        display:none;
+    }
+    #header .navopen.on .bar3 {
+        background:#21bbb1;
+        transform: rotate(-135deg);
+        top:10px;
+    }
+    
+    /* header sign */
+    #header #nav { 
+        position:fixed; top:0; right:-250px;
+        height:100%; background:#252525; width:250px; 
+        padding-top:60px; 
+        transition:all 0.5s; 
+        overflow-y:auto;
+    }
+    #header #nav.on {
+        right:0;
+    }
+    #header .sign {
+        color:#555;
+        border:0px dotted #343434;
+        border-top:1px solid #444;
+        border-bottom:1px solid #444;
+        overflow: hidden;
+        background:#1c1c1c;
+    }
+    #header .sign a {
+        padding:8px 10px;
+        text-align: center; font-size:11px; color:#fff;
+        line-height:22px;
+    }
+    #header .sign a:first-child { border-right:1px solid #444; }
+    #header .sign > a:hover { color:#21bbb1; }
+ 
+    #header #nav .depth1 { margin:0px 0 }
+    #header #nav .depth1 > li { position:relative; 
+          }
+    #header #nav .depth1 > li > a {
+        display:block; 
+        font-size:15px; text-align: left; font-weight: bold;
+        padding:20px 30px; 
+        border-bottom: 1px solid rgb(51, 51, 51);
+    }
+    #header #nav .depth1 > li > a:hover {
+        background:none;
+        color:#21bbb1;
+    }
+    #header #nav .depth1 > li .depth2 {
+        position:static; top:0; left:0%;
+        background:#333;
+        width:auto; opacity:1; z-index:auto;
+        font-size:13px;
+        margin-top:0px; 
+        display:none; 
+    }
+    #header #nav .depth1 > li.on .depth2 {
+        left:100%; 
+        opacity:1; z-index:9999; 
+        transition:left 0.05s, opacity 0.1s, z-index 0.2s;
+    }
+    #header #nav .depth1 .depth2 li a {
+        display:block;
+        padding:12px 20px 12px 30px;
+        border-bottom: 1px solid #3f3f3f;
+        transition:all 0.1s;
+    }
+
+    #header #nav .depth1 > li .depth2 li:hover a {
+        background:none;
+        color:#21bbb1;
+    }
+    #header .decobox { position:absolute; top:0; left:100%; width:0px; height:100%; 
+        background:rgba(17, 17, 17, 0.8); transition:all 0.1s;
+        display:none; 
+    }
+    #header .decobox.on { width:140px; }
+
+    
+    .contact { display:none; }
+    #header .info { display:none; }
+}
