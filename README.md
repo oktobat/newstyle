@@ -1,1 +1,1 @@
-# newstyle
+https://oktobat.github.io/newstyle/
